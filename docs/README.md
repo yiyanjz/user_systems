@@ -40,3 +40,6 @@ python3 manage.py test core
 
 # Conclusion
 This is a general design, if this was production I would focus alot more on minor details keeping the UI user-friendly and easy to interact with.
+
+# Demo Video Link
+[https://drive.google.com/file/d/18WrDxzuL5xmlOIbVFDAN4xoeEBqGiaEZ/view?usp=share_link](https://drive.google.com/file/d/18WrDxzuL5xmlOIbVFDAN4xoeEBqGiaEZ/view?usp=share_link)
