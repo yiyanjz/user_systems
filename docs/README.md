@@ -12,8 +12,8 @@
 
 ## Setup and Installation
 1.  Clone the repository:
-    git clone [repository URL]
-    cd [project directory]
+    git clone [[repository URL]](https://github.com/yiyanjz/user_systems.git)
+    cd [project directory] (user_system)
 
 2.  Create and activate a virtual environment:
     python3 -m venv venv
