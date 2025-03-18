@@ -1,0 +1,142 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        .register-container {
+            background-color: #f0f0f5;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .register-container h2 {
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .register-button {
+            background-color: #3f51b5;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .register-button:hover {
+            background-color: #303f9f;
+        }
+
+        .login-link {
+            margin-top: 30px;
+            font-size: 15px;
+            color: #555;
+            text-align: center;
+        }
+
+        .login-link a {
+            color: #3f51b5;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .password-requirements {
+            font-size: 13px;
+            color: #777;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .password-requirements ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .errorlist {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}  <div class="password-requirements">
+                <ul>
+                    <li>Your password can't be too similar to your other personal information.</li>
+                    <li>Your password must contain at least 8 characters.</li>
+                    <li>Your password can't be a commonly used password.</li>
+                    <li>Your password can't be entirely numeric.</li>
+                </ul>
+            </div>
+            <button type="submit" class="register-button">Register</button>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="{% url 'user_login' %}">Login</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+user_system/
+├── core/
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── middleware.py
+├── src/
+│   └── templates/
+│       └── core/
+│           ├── register.html
+│           ├── login.html
+│           └── user_info.html
+├── user_system/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── docs/ 
+│   ├── README.md
+│   ├── design_document.md
+│   ├── test_report.md
+├── requirements.txt
+├── WorkflowVideo.mov
